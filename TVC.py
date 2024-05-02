@@ -4,7 +4,7 @@ import sqlite3
 import asyncio
 
 # Function to scrape and store data
-def async scrape_and_store():
+async def scrape_and_store():
     # Connect to SQLite database
     conn = sqlite3.connect('tvc_news.db')
     c = conn.cursor()
@@ -48,3 +48,5 @@ def async scrape_and_store():
     conn.commit()
     conn.close()
 
+
+asyncio.run(scrape_and_store())
